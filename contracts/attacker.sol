@@ -4,7 +4,7 @@ import {VulnerableBank} from "./vulnerableBank.sol";
 
 contract Attacker {
     VulnerableBank public vulnerableBank;
-    uint256 public constant ATTACK_AMOUNT = 1 ether;
+    uint256 public constant ATTACK_AMOUNT = 0.05 ether;
 
     constructor(address _vulnerableBank) {
         vulnerableBank = VulnerableBank(_vulnerableBank);
