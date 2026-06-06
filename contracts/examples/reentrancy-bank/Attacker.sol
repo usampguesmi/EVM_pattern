@@ -1,6 +1,6 @@
 pragma solidity ^0.8.20;
 
-import {VulnerableBank} from "./vulnerableBank.sol";
+import {VulnerableBank} from "./VulnerableBank.sol";
 
 contract Attacker {
     VulnerableBank public vulnerableBank;

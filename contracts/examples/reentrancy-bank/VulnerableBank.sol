@@ -14,11 +14,12 @@ contract VulnerableBank {
         require(success, "Transfer failed");
         balances[msg.sender] = 0;
     }
+
     function getBalance() public view returns (uint256) {
         return address(this).balance;
     }
+
     function getBalanceOf(address _address) public view returns (uint256) {
         return balances[_address];
     }
-    
 }
