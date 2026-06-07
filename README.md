@@ -55,3 +55,30 @@ After setting the variable, you can run the deployment with the Sepolia network:
 ```shell
 npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
 ```
+
+## New Single-Function Reentrancy Examples
+
+Added example folders for separated contracts, scripts, and tests:
+
+- `contracts/examples/reentrancy-vault`
+  - `SimpleVault.sol`
+  - `VaultAttacker.sol`
+  - `scripts/examples/reentrancy-vault.ts`
+  - `test/examples/reentrancy-vault.test.js`
+
+- `contracts/examples/reentrancy-pool`
+  - `ReentrancyPool.sol`
+  - `PoolAttacker.sol`
+  - `scripts/examples/reentrancy-pool.ts`
+  - `test/examples/reentrancy-pool.test.js`
+
+### Run on Sepolia
+
+Use the existing `.env` with `SEPOLIA_RPC_URL` and `PRIVATE_KEY`.
+
+- `npm run example:vault:sepolia`
+- `npm run example:pool:sepolia`
+
+### Run local tests
+
+- `npm run test:examples`

@@ -26,11 +26,17 @@ export default defineConfig({
     hardhatMainnet: {
       type: "edr-simulated",
       chainType: "l1",
+      blockGasLimit: 30_000_000,
     },
-   sepolia: {
+    sepolia: {
       type: "http",
       url: configVariable("SEPOLIA_RPC_URL"),
       accounts: [configVariable("PRIVATE_KEY")],
+    },
+    localGeth: {
+      type: "http",
+      url: configVariable("LOCAL_GETH_RPC_URL"),
+      accounts: [configVariable("LOCAL_GETH_PRIVATE_KEY")],
     },
   },
 });

